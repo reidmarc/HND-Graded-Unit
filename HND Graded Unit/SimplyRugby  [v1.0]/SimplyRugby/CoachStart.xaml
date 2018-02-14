@@ -1,0 +1,144 @@
+﻿<Page x:Class="SimplyRugby.CoachStart"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimplyRugby"
+      mc:Ignorable="d" 
+     d:DesignHeight="800" d:DesignWidth="1200"
+      Title="CoachStart">
+
+    <Grid>
+        <!--The logo displayed-->
+        <Image x:Name="logoPicture" Source="Images/SimplyRugbyLogo.bmp" HorizontalAlignment="Center" Height="87" Margin="230,10,220,0" VerticalAlignment="Top" Width="750"/>
+
+        <!--Player Details Title (Setup - Arial Font, Size 18, ExtraBold, Cannot be tab selected)-->
+        <Label x:Name="PlayerDetailsTitleLabel" Content="Player Details" HorizontalAlignment="Left" Margin="60,120,0,0" VerticalAlignment="Top" FontWeight="ExtraBold" FontSize="18" FontFamily="Arial" HorizontalContentAlignment="Center" Width="300" IsTabStop="False"/>
+
+        <!--Player Details - field labels (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Label x:Name="MembershipNoLabel" Content="Membership No:" HorizontalAlignment="Left" Margin="60,200,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="MemberNameLabel" Content="Member Name:" HorizontalAlignment="Left" Margin="60,240,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="SRUNoLabel" Content="SRU No:" HorizontalAlignment="Left" Margin="60,280,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="EmailAddressLabel" Content="Email Address:" HorizontalAlignment="Left" Margin="60,320,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="PhoneNumberLabel" Content="Phone No:" HorizontalAlignment="Left" Margin="60,360,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="DateOfBirthLabel" Content="Date of Birth:" HorizontalAlignment="Left" Margin="60,400,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+
+        <!--Player Details - field textboxes (Setup - Arial Font, Size 12, Cannot be tab selected, Read Only)-->
+        <TextBox x:Name="MembershipNoTxt" HorizontalAlignment="Left" Height="30" Margin="180,200,0,0" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="SRUNoTxt" HorizontalAlignment="Left" Height="30" Margin="180,280,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="EmailAddressTxt" HorizontalAlignment="Left" Height="30" Margin="180,320,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="PhoneNoTxt" HorizontalAlignment="Left" Height="30" Margin="180,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="DateOfBirthTxt" HorizontalAlignment="Left" Height="30" Margin="180,400,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+
+        <!--Player Details - combobox (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <ComboBox x:Name="PlayerComboBox" HorizontalAlignment="Left" Margin="180,240,0,0" VerticalAlignment="Top" Width="180" Height="30" DropDownClosed="PlayerComboBox_DropDownClosed" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsTabStop="False"/>
+
+        <!--The vertical divider-->
+        <Separator HorizontalAlignment="Left" Height="28" Margin="104,422,0,0" VerticalAlignment="Top" Width="614" RenderTransformOrigin="0.5,0.5" Foreground="Black">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+
+        <!--Player Details Title (Setup - Arial Font, Size 18, ExtraBold, Cannot be tab selected)-->
+        <Label x:Name="PlayerProfileTitleLabel" Content="Player Profile" HorizontalAlignment="Left" Margin="472,120,0,0" VerticalAlignment="Top" Width="617" FontWeight="ExtraBold" FontSize="18" FontFamily="Arial" HorizontalContentAlignment="Center" IsTabStop="False"/>
+
+        <!--Player Details Titles (Setup - Arial Font, Size 16, ExtraBold, Cannot be tab selected)-->
+        <Label x:Name="CategoryLabel" Content="Category" HorizontalAlignment="Left" Margin="450,160,0,0" VerticalAlignment="Top" Width="102" FontWeight="ExtraBold" FontSize="16" FontFamily="Arial" IsTabStop="False"/>
+        <Label x:Name="SkillLabel" Content="Skill" HorizontalAlignment="Left" Margin="565,160,0,0" VerticalAlignment="Top" Width="80" FontWeight="ExtraBold" FontSize="16" FontFamily="Arial" IsTabStop="False"/>
+        <Label x:Name="SkillLevelLabel" Content="Skill Level" HorizontalAlignment="Left" Margin="685,160,0,0" VerticalAlignment="Top" Width="103" FontWeight="ExtraBold" FontSize="16" FontFamily="Arial" IsTabStop="False"/>
+        <Label x:Name="CommentsLabel" Content="Comments" HorizontalAlignment="Left" Margin="840,160,0,0" VerticalAlignment="Top" Width="296" FontWeight="ExtraBold" FontSize="16" FontFamily="Arial" IsTabStop="False"/>
+
+        <!--Player Details category labels (Setup - Arial Font, Size 12,  Cannot be tab selected)-->
+        <Label x:Name="PassingLabel" Content="Passing" HorizontalAlignment="Left" Margin="450,200,0,0" VerticalAlignment="Top" Width="102" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center" IsTabStop="False" />
+        <Label x:Name="TacklingLabel" Content="Tackling" HorizontalAlignment="Left" Margin="450,360,0,0" VerticalAlignment="Top" Width="102" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center"  IsTabStop="False"/>
+        <Label x:Name="KickingLabel" Content="Kicking" HorizontalAlignment="Left" Margin="450,560,0,0" VerticalAlignment="Top" Width="102" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center" IsTabStop="False" />
+
+        <!--Player Details skill labels (Setup - Arial Font, Size 12,  Cannot be tab selected)-->
+        <Label x:Name="StandardLabel" Content="Standard" HorizontalAlignment="Left" Margin="565,200,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center"  IsTabStop="False"/>
+        <Label x:Name="SpinLabel" Content="Spin" HorizontalAlignment="Left" Margin="565,240,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center"  IsTabStop="False"/>
+        <Label x:Name="PopLabel" Content="Pop" HorizontalAlignment="Left" Margin="565,280,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center"  IsTabStop="False"/>
+        <Label x:Name="FrontLabel" Content="Front" HorizontalAlignment="Left" Margin="565,360,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center"  IsTabStop="False"/>
+        <Label x:Name="RearLabel" Content="Rear" HorizontalAlignment="Left" Margin="565,400,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center" IsTabStop="False" />
+        <Label x:Name="SideLabel" Content="Side" HorizontalAlignment="Left" Margin="565,440,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center" IsTabStop="False" />
+        <Label x:Name="ScrabbleLabel" Content="Scrabble" HorizontalAlignment="Left" Margin="565,480,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center" IsTabStop="False" />
+        <Label x:Name="DropLabel" Content="Drop" HorizontalAlignment="Left" Margin="565,560,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center"  IsTabStop="False"/>
+        <Label x:Name="PuntLabel" Content="Punt" HorizontalAlignment="Left" Margin="565,600,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center"  IsTabStop="False"/>
+        <Label x:Name="GrubberLabel" Content="Grubber" HorizontalAlignment="Left" Margin="565,640,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center"  IsTabStop="False"/>
+        <Label x:Name="GoalLabel" Content="Goal" HorizontalAlignment="Left" Margin="565,680,0,0" VerticalAlignment="Top" Width="80" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center"  IsTabStop="False"/>
+
+        <!--Player Profile - comment textboxes (Setup - Arial Font, Size 12, Tab Index Order set)-->
+        <TextBox x:Name="PassingCommentsTxt" HorizontalAlignment="Left" Height="110" Margin="840,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" FontFamily="Arial" FontSize="12" TextAlignment="Center" VerticalContentAlignment="Center" TabIndex="4"/>
+        <TextBox x:Name="TacklingCommentsTxt" HorizontalAlignment="Left" Height="150" Margin="840,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" FontFamily="Arial" FontSize="12" TextAlignment="Center" VerticalContentAlignment="Center" TabIndex="9"/>
+        <TextBox x:Name="KickingCommentsTxt" HorizontalAlignment="Left" Height="150" Margin="840,560,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" FontFamily="Arial" FontSize="12" TextAlignment="Center" VerticalContentAlignment="Center" TabIndex="14"/>
+
+        <!--Player Profile - Update Player Profile button (Setup - Arial Font, Size 12, Tab Index Order set, IsDefault so that the user can press 'enter' to activate the button)-->
+        <Button x:Name="UpdatePlayerProfileButton" Content="Update Player Profile" HorizontalAlignment="Left" Margin="565,740,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="UpdatePlayerProfileButton_Click"  FontFamily="Arial" FontSize="12" IsDefault="True" TabIndex="15"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="StandardSlider" HorizontalAlignment="Left" Margin="650,200,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="1"/>
+        <TextBox x:Name="StandardSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,200,0,0" TextWrapping="Wrap" Text="{Binding ElementName=StandardSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="SpinSlider" HorizontalAlignment="Left" Margin="650,240,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="2"/>
+        <TextBox x:Name="SpinSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,240,0,0" TextWrapping="Wrap" Text="{Binding ElementName=SpinSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="PopSlider" HorizontalAlignment="Left" Margin="650,280,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="3"/>
+        <TextBox x:Name="PopSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,280,0,0" TextWrapping="Wrap" Text="{Binding ElementName=PopSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="FrontSlider" HorizontalAlignment="Left" Margin="650,360,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="5"/>
+        <TextBox x:Name="FrontSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,360,0,0" TextWrapping="Wrap" Text="{Binding ElementName=FrontSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="RearSlider" HorizontalAlignment="Left" Margin="650,400,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="6"/>
+        <TextBox x:Name="RearSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,400,0,0" TextWrapping="Wrap" Text="{Binding ElementName=RearSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="SideSlider" HorizontalAlignment="Left" Margin="650,440,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="7"/>
+        <TextBox x:Name="SideSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,440,0,0" TextWrapping="Wrap" Text="{Binding ElementName=SideSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="ScrabbleSlider" HorizontalAlignment="Left" Margin="650,480,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="8"/>
+        <TextBox x:Name="ScrabbleSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,480,0,0" TextWrapping="Wrap" Text="{Binding ElementName=ScrabbleSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="DropSlider" HorizontalAlignment="Left" Margin="650,560,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="10"/>
+        <TextBox x:Name="DropSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,560,0,0" TextWrapping="Wrap" Text="{Binding ElementName=DropSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="PuntSlider" HorizontalAlignment="Left" Margin="650,600,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="11"/>
+        <TextBox x:Name="PuntSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,600,0,0" TextWrapping="Wrap" Text="{Binding ElementName=PuntSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="GrubberSlider" HorizontalAlignment="Left" Margin="650,640,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="12"/>
+        <TextBox x:Name="GrubberSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,640,0,0" TextWrapping="Wrap" Text="{Binding ElementName=GrubberSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!-- Sets up the slider and binds the slider value to the textbox, so it displays the current value-->
+        <Slider x:Name="GoalSlider" HorizontalAlignment="Left" Margin="650,680,0,0" VerticalAlignment="Top" Width="150" Height="30" Foreground="Black" Minimum="0" Maximum="5" IsSelectionRangeEnabled="True" SelectionStart="0" SelectionEnd="5" TickPlacement="BottomRight" TickFrequency="1" AutoToolTipPlacement="BottomRight" FontFamily="Arial" IsMoveToPointEnabled="True" IsSnapToTickEnabled="True" TabIndex="13"/>
+        <TextBox x:Name="GoalSkillValueTextBox" HorizontalAlignment="Left" Height="30" Margin="805,680,0,0" TextWrapping="Wrap" Text="{Binding ElementName=GoalSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Arial" FontSize="12"  IsReadOnly="True" IsTabStop="False"/>
+
+        <!--Player Profile - field label (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Label x:Name="LastUpdatedLabel" Content="Profile Last Updated:" HorizontalAlignment="Left" Margin="840,740,0,0" VerticalAlignment="Top" Width="131" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center" IsTabStop="False"/>
+
+        <!--Player Profile - field textbox (Setup - Arial Font, Size 12, Read Only, Cannot be tab selected)-->
+        <TextBox x:Name="LastUpdatedTxt" HorizontalAlignment="Left" Height="30" Margin="976,740,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+
+        <!--The top horizontal divider-->
+        <Separator HorizontalAlignment="Left" Height="30" Margin="450,320,0,0" VerticalAlignment="Top" Width="686"/>
+
+        <!--The bottom horizontal divider-->
+        <Separator HorizontalAlignment="Left" Height="30" Margin="450,520,0,0" VerticalAlignment="Top" Width="686"/>
+
+        <!--Navigation - buttons (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Button x:Name="BackToLoginButton" Content="Log Out" HorizontalAlignment="Left" Margin="180,700,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="BackToLoginButton_Click" FontFamily="Arial" FontSize="12" IsTabStop="False"/>
+        <Button x:Name="ExitAppButton" Content="Exit Application" HorizontalAlignment="Left" Margin="180,740,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="ExitAppButton_Click" FontFamily="Arial" FontSize="12" IsTabStop="False"/>
+
+    </Grid>
+</Page>

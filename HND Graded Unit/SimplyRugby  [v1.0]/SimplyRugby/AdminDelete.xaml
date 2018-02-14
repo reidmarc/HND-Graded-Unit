@@ -1,0 +1,76 @@
+﻿<Page x:Class="SimplyRugby.AdminDelete"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimplyRugby"
+      mc:Ignorable="d" 
+  d:DesignHeight="920" d:DesignWidth="1200"
+      Title="AdminDelete">
+
+    <Grid>
+        <!--The logo displayed-->
+        <Image x:Name="logoPicture" Source="Images/SimplyRugbyLogo.bmp" HorizontalAlignment="Center" Height="87" Margin="10,10,0,0" VerticalAlignment="Top" Width="750"/>
+
+        <!-- Member Record Title (Setup - Arial Font, Size 18 and ExtraBold, Cannot be tab selected)-->
+        <Label x:Name="MemberRecordTitleLabel" Content="Delete a Member Record" HorizontalAlignment="Left" Margin="110,110,0,0" VerticalAlignment="Top" FontWeight="ExtraBold" FontSize="18" FontFamily="Arial" HorizontalContentAlignment="Center" Width="585" IsTabStop="False"/>
+
+        <!--Member Record - field labels (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Label x:Name="MembershipNoLabel" Content="Membership No:" HorizontalAlignment="Left" Margin="110,150,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="MemberNameLabel" Content="Member Name:" HorizontalAlignment="Left" Margin="110,190,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="SRUNoLabel" Content="SRU No:" HorizontalAlignment="Left" Margin="110,230,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="EmailAddressLabel" Content="Email Address:" HorizontalAlignment="Left" Margin="110,270,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="PhoneNumberLabel" Content="Phone No:" HorizontalAlignment="Left" Margin="110,310,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="DateOfBirthLabel_Copy" Content="Date of Birth:" HorizontalAlignment="Left" Margin="110,350,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="MembershipTypeLabel" Content="Membership Type:" HorizontalAlignment="Left" Margin="110,390,0,0" VerticalAlignment="Top" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+
+
+        <!--Member Record - field textboxes (Setup - Arial Font, Size 12, Read Only, Cannot be tab selected)-->
+        <TextBox x:Name="MembershipNoTxt" HorizontalAlignment="Left" Height="30" Margin="230,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="MemberNameTxt" HorizontalAlignment="Left" Height="30" Margin="230,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="SRUNoTxt" HorizontalAlignment="Left" Height="30" Margin="230,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="EmailAddressTxt" HorizontalAlignment="Left" Height="30" Margin="230,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="PhoneNoTxt" HorizontalAlignment="Left" Height="30" Margin="230,310,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="DateOfBirthDayTxt" HorizontalAlignment="Left" Height="30" Margin="370,350,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="DateOfBirthMonthTxt" HorizontalAlignment="Left" Height="30" Margin="325,350,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="DateOfBirthYearTxt" HorizontalAlignment="Left" Height="30" Margin="230,350,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+        <TextBox x:Name="MembershipTypeTxt" HorizontalAlignment="Left" Height="30" Margin="230,390,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsReadOnly="True" IsTabStop="False"/>
+
+        <!--Member Record - Delete Record button (Setup - Arial Font, Size 12, Tab Index Order set, IsDefault so that the user can press 'enter' to activate the button)-->
+        <Button x:Name="DeleteRecordButton" Content="Delete Record" HorizontalAlignment="Left" Margin="230,470,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="DeleteRecordButton_Click" FontFamily="Arial" FontSize="12" IsDefault="True"/>
+
+        <!--Member Record - comboboxes (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <ComboBox x:Name="MembershipNoComboBox" HorizontalAlignment="Left" Margin="515,150,0,0" VerticalAlignment="Top" Width="180" Height="30" DropDownClosed="MembershipNoComboBox_DropDownClosed" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsTabStop="False" />
+        <ComboBox x:Name="MemberNameComboBox" HorizontalAlignment="Left" Margin="515,190,0,0" VerticalAlignment="Top" Width="180" Height="30" DropDownClosed="MemberNameComboBox_DropDownClosed" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsTabStop="False" />
+
+        <!--The divider-->
+        <Separator HorizontalAlignment="Left" Height="32" Margin="461,415,0,0" VerticalAlignment="Top" Width="578" RenderTransformOrigin="0.5,0.5" Foreground="Black">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+
+        <!-- User Account Title (Setup - Arial Font, Size 18 and ExtraBold, Cannot be tab selected)-->
+        <Label x:Name="UserAccountTitleLabel" Content="Delete a User Account" HorizontalAlignment="Left" Margin="795,110,0,0" VerticalAlignment="Top" FontWeight="ExtraBold" FontSize="18" FontFamily="Arial" HorizontalContentAlignment="Center" Width="295" IsTabStop="False"/>
+
+        <!--User Account - field label (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Label x:Name="UsernameLabel" Content="Username:" HorizontalAlignment="Left" Margin="795,150,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+
+        <!--User Account - combobox (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <ComboBox x:Name="AccountComboBox" HorizontalAlignment="Left" Margin="910,150,0,0" VerticalAlignment="Top" Width="180" Height="30"  FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" IsTabStop="False" />
+
+        <!--User Account - Delete Account button (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Button x:Name="DeleteAccountButton" Content="Delete Account" HorizontalAlignment="Left" Margin="910,190,0,0" VerticalAlignment="Top" Width="180" Height="30" FontFamily="Arial" FontSize="12" Click="DeleteAccountButton_Click"  IsTabStop="False"/>
+
+        <!--Navigation - buttons (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="910,660,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="BackButton_Click" FontFamily="Arial" FontSize="12" IsTabStop="False"/>
+        <Button x:Name="BackToLoginButton" Content="Log Out" HorizontalAlignment="Left" Margin="910,700,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="BackToLoginButton_Click" FontFamily="Arial" FontSize="12" IsTabStop="False"/>
+        <Button x:Name="ExitAppButton" Content="Exit Application" HorizontalAlignment="Left" Margin="910,740,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="ExitAppButton_Click" FontFamily="Arial" FontSize="12" IsTabStop="False"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,78 @@
+﻿<Page x:Class="SimplyRugby.AdminAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SimplyRugby"
+      mc:Ignorable="d" 
+     d:DesignHeight="800" d:DesignWidth="1200"
+      Title="AdminAdd">
+
+    <Grid>
+        <!--The logo displayed-->
+        <Image x:Name="logoPicture" Source="Images/SimplyRugbyLogo.bmp" HorizontalAlignment="Center" Height="87" Margin="130,10,120,0" VerticalAlignment="Top" Width="750"/>
+
+        <!--Member Record Title (Setup - Arial Font, Size 18, ExtraBold, Cannot be tab selected)-->
+        <Label x:Name="MemberRecordTitleLabel" Content="Add a Member Record" HorizontalAlignment="Left" Margin="110,110,0,0" VerticalAlignment="Top" FontWeight="ExtraBold" FontSize="18" FontFamily="Arial" HorizontalContentAlignment="Center" Width="300" IsTabStop="False"/>
+
+        <!--Member Record - field labels (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Label x:Name="MemberNameLabel" Content="Member Name:" HorizontalAlignment="Left" Margin="110,150,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="SRUNumberLabel" Content="SRU No:" HorizontalAlignment="Left" Margin="110,190,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="EmailAddressLabel" Content="Email Address:" HorizontalAlignment="Left" Margin="110,230,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="PhoneNumberLabel" Content="Phone No:" HorizontalAlignment="Left" Margin="110,270,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="DateOfBirthLabel" Content="Date of Birth:" HorizontalAlignment="Left" Margin="110,310,0,0" VerticalAlignment="Top" Width="100" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="MembershipTypeLabel" Content="Membership Type:" HorizontalAlignment="Left" Margin="110,350,0,0" VerticalAlignment="Top" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+
+        <!--Member Record - field textboxes (Setup - Arial Font, Size 12, Tab Index Order set)-->
+        <TextBox x:Name="MemberNameTxt" HorizontalAlignment="Left" Height="30" Margin="230,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" TabIndex="1"/>
+        <TextBox x:Name="SRUNoTxt" HorizontalAlignment="Left" Height="30" Margin="230,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" TabIndex="2"/>
+        <TextBox x:Name="EmailAddressTxt" HorizontalAlignment="Left" Height="30" Margin="230,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" TabIndex="3"/>
+        <TextBox x:Name="PhoneNoTxt" HorizontalAlignment="Left" Height="30" Margin="230,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" TabIndex="4"/>
+        <TextBox x:Name="DateOfBirthYearTxt" HorizontalAlignment="Left" Height="30" Margin="230,310,0,0" TextWrapping="Wrap" Text="YYYY" VerticalAlignment="Top" Width="90" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" GotFocus="DateOfBirthYearTxt_GotFocus" LostFocus="DateOfBirthYearTxt_LostFocus" TabIndex="5"/>
+        <TextBox x:Name="DateOfBirthMonthTxt" HorizontalAlignment="Left" Height="30" Margin="326,310,0,0" TextWrapping="Wrap" Text="MM" VerticalAlignment="Top" Width="40" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" GotFocus="DateOfBirthMonthTxt_GotFocus" LostFocus="DateOfBirthMonthTxt_LostFocus" TabIndex="6"/>
+        <TextBox x:Name="DateOfBirthDayTxt" HorizontalAlignment="Left" Height="30" Margin="370,310,0,0" TextWrapping="Wrap" Text="DD" VerticalAlignment="Top" Width="40" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" GotFocus="DateOfBirthDayTxt_GotFocus" LostFocus="DateOfBirthDayTxt_LostFocus" TabIndex="7"/>
+
+        <!--Member Record - Membership Type radiobuttons (Setup - Arial Font, Size 12, Tab Index Order set)-->
+        <RadioButton x:Name="PlayingMemberRadioButton" Content="Playing" HorizontalAlignment="Left" Margin="230,350,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center" Width="66" Checked="PlayingMemberRadioButton_Checked" KeyboardNavigation.AcceptsReturn="True" TabIndex="8"/>
+        <RadioButton x:Name="NonPlayingMemberRadioButton" Content="Non-Playing" HorizontalAlignment="Left" Margin="230,390,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center" Width="92" Checked="NonPlayingMemberRadioButton_Checked" KeyboardNavigation.AcceptsReturn="True" TabIndex="9"/>
+
+        <!--Member Record - Add Record button (Setup - Arial Font, Size 12, Tab Index Order set, IsDefault so that the user can press 'enter' to activate the button)-->
+        <Button x:Name="AddRecordButton" Content="Add Record" HorizontalAlignment="Left" Margin="230,470,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="AddRecordButton_Click" FontFamily="Arial" FontSize="12" TabIndex="10" IsDefault="True"/>
+
+        <!--The divider-->
+        <Separator HorizontalAlignment="Left" Height="32" Margin="349,427,0,0" VerticalAlignment="Top" Width="606" RenderTransformOrigin="0.5,0.5" Foreground="Black">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+
+        <!--User Account Title (Setup - Arial Font, Size 18, ExtraBold, Cannot be tab selected)-->
+        <Label x:Name="UserAccountTitleLabel" Content="Add a User Account" HorizontalAlignment="Left" Margin="795,110,0,0" VerticalAlignment="Top" FontWeight="ExtraBold" FontSize="18" FontFamily="Arial" HorizontalContentAlignment="Center" Width="295" IsTabStop="False"/>
+
+
+        <!--User Account - field labels (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Label x:Name="AddAdminUsernameLabel" Content="New Username:" HorizontalAlignment="Left" Margin="790,150,0,0" VerticalAlignment="Top" Width="105" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+        <Label x:Name="AccountTypeLabel" Content="Account Type:" HorizontalAlignment="Left" Margin="790,190,0,0" VerticalAlignment="Top" Height="30" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+
+        <!--User Account - field textbox (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <TextBox x:Name="AddAccountUsernameTxt" HorizontalAlignment="Left" Height="30" Margin="910,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontFamily="Arial" FontSize="12" VerticalContentAlignment="Center" IsTabStop="False"/>
+
+        <!--User Account - Account Type radiobuttons (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <RadioButton x:Name="AdminAccountRadioButton" Content="Admin" HorizontalAlignment="Left" Margin="910,190,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center" Width="92" IsTabStop="False" Checked="AdminAccountRadioButton_Checked"/>
+        <RadioButton x:Name="CoachAccountRadioButton" Content="Coach" HorizontalAlignment="Left" Margin="910,230,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="12" Height="30" VerticalContentAlignment="Center" Width="92" IsTabStop="False" Checked="CoachAccountRadioButton_Checked"/>
+
+        <!--User Account - Add Account button (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Button x:Name="AddAccountButton" Content="Add Account" HorizontalAlignment="Left" Margin="910,310,0,0" VerticalAlignment="Top" Width="180" Height="30" FontFamily="Arial" FontSize="12" Click="AddAccountButton_Click" IsTabStop="False"/>
+
+        <!--Navigation - buttons (Setup - Arial Font, Size 12, Cannot be tab selected)-->
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Margin="910,660,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="BackButton_Click" FontFamily="Arial" FontSize="12" IsTabStop="False"/>
+        <Button x:Name="BackToLoginButton" Content="Log Out" HorizontalAlignment="Left" Margin="910,700,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="BackToLoginButton_Click" FontFamily="Arial" FontSize="12" IsTabStop="False"/>
+        <Button x:Name="ExitAppButton" Content="Exit Application" HorizontalAlignment="Left" Margin="910,740,0,0" VerticalAlignment="Top" Width="180" Height="30" Click="ExitAppButton_Click" FontFamily="Arial" FontSize="12" IsTabStop="False"/>
+
+    </Grid>
+</Page>
